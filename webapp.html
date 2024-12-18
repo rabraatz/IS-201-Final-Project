@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Boredom Button | Rebecca Braatz</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=Xt5q8KnCd00x&format=png&color=000000" />
+    
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            background-image: url('https://www.desktopbackground.org/download/1920x1200/2014/06/20/781155_10-things-i-wish-i-knew-about-christmas-wrapping-paper_2880x1800_h.jpg'); /* Replace with a valid URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #ffffff;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.94);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .activity {
+            font-size: 1.5em;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #228B22;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #004d00;
+        }
+        .footer-link { 
+            position: fixed; 
+            bottom: 10px; 
+            width: 100%; 
+            text-align: center; 
+        }
+        .footer-link a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 10px; 
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="activity" id="activity">Click the button for a Christmas activity!</div>
+        <button class="btn" onclick="generateActivity()">Ho Ho Ho! What's next?</button>
+    </div>
+    <div class="footer-link"> 
+        <a href="scratch.html" target="_blank">Return to Travel Page</a>
+    </div>
+    <script>
+        const activities = [
+            "Decorate a Christmas tree",
+            "Bake Christmas cookies",
+            "Watch a holiday movie",
+            "Build a gingerbread house",
+            "Read Luke 2",
+            "Go caroling in your neighborhood",
+            "Wrap presents for your loved ones",
+            "Write a letter to Santa",
+            "Make handmade Christmas cards",
+            "Watch 'The Christ Child'",
+            "Read a Christmas story",
+            "Have a snowball fight (or a pillow fight if there's no snow!)",
+            "Create a holiday-themed music playlist",
+            "Craft your own Christmas ornaments",
+            "Host a holiday party",
+            "Drink hot cocoa by the fire",
+            "Drive around to see holiday lights",
+            "Share your favorite Christmas scripture",
+            "Complete a #LighttheWorld task",
+            "DIY Snow Globes",
+            "Holiday Scavenger Hunt",
+            "Have a Christmas movie marathon",
+            "Write what you're grateful for from the past year",
+            "Help someone in need have a jolly Christmas",
+            "Volunteer at a local charity or soup kitchen"
+        ];
+
+        function generateActivity() {
+            const randomIndex = Math.floor(Math.random() * activities.length);
+            const activity = activities[randomIndex];
+            document.getElementById('activity').textContent = activity;
+        }
+    </script>
+</body>
+</html>
